@@ -270,7 +270,7 @@ const TestimonialsSection = () => {
                         <div className="inline-flex items-center justify-center bg-lime-100 w-12 h-12 rounded-full mb-4">
                             <Building className="h-6 w-6 text-emerald-700" />
                         </div>
-                        <h3 className="text-3xl font-bold text-emerald-950 mb-1">250+</h3>
+                        <h3 className="text-3xl font-bold text-emerald-950 mb-1">150+</h3>
                         <p className="text-emerald-700">Satisfied Clients</p>
                     </motion.div>
 

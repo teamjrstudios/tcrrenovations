@@ -27,11 +27,55 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+interface ProjectTableProps {
+    loading: boolean;
+    error: Error | null; // Assuming error is an Error object or null
+    projects: {
+        id: string; // Or number, depending on your project's ID type
+        title: string;
+        description: string;
+        tags: string[];
+        location: string | null;
+        completed_at: string | null; // Assuming completed_at is a date string or null
+        [key: string]: any; // Allow for other project properties
+    }[] | null;
+    displayedProjects: {
+        id: string;
+        title: string;
+        description: string;
+        tags: string[];
+        location: string | null;
+        completed_at: string | null;
+        [key: string]: any;
+    }[];
+    page: number;
+    setPage: (page: number | ((prevPage: number) => number)) => void;
+    totalPages: number;
+    onEditClick: (project: {
+        id: string;
+        title: string;
+        description: string;
+        tags: string[];
+        location: string | null;
+        completed_at: string | null;
+        [key: string]: any;
+    }) => void;
+    onDeleteClick: (project: {
+        id: string;
+        title: string;
+        description: string;
+        tags: string[];
+        location: string | null;
+        completed_at: string | null;
+        [key: string]: any;
+    }) => void;
+}
+
 
 // Animation variants for table rows
 const tableRowVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: (i) => ({
+    visible: (i: number) => ({
         opacity: 1,
         y: 0,
         transition: {
@@ -53,7 +97,7 @@ const ProjectTable = ({
                           totalPages,
                           onEditClick,
                           onDeleteClick
-                      }) => {
+                      }: ProjectTableProps) => {
     const itemsPerPage = 5;
 
     return (

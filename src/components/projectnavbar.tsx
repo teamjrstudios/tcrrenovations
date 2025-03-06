@@ -1,8 +1,10 @@
 // components/ProjectNavbar.jsx
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
-
-const ProjectNavbar = ({ onCreateClick }) => {
+interface ProjectNavbarProps {
+    onCreateClick: () => void;
+}
+const ProjectNavbar = ({ onCreateClick }:ProjectNavbarProps) => {
     return (
         <header className="sticky top-0 z-40 border-b bg-white">
             <div className="flex h-16 items-center justify-between py-4 px-4">

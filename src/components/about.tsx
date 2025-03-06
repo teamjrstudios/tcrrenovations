@@ -2,9 +2,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Award, Clock, Users } from 'lucide-react';
+import { Award, Clock, Users } from 'lucide-react';
 
 interface AboutSectionProps {
     nextRef: React.RefObject<HTMLElement>;
@@ -138,7 +137,7 @@ const AboutSection = ({nextRef}: AboutSectionProps) => {
                             className="text-slate-600 mb-6"
                             variants={itemVariants}
                         >
-                            Founded in 2008, TCR Renovations has built a sterling reputation throughout Southampton, PA and surrounding communities. We're known for our quality craftsmanship, integrity, and exceptional client service on every project from kitchen remodels to complete home renovations.
+                            Founded in 2008, TCR Renovations has built a sterling reputation throughout Southampton, PA and surrounding communities. We&#39;re known for our quality craftsmanship, integrity, and exceptional client service on every project from kitchen remodels to complete home renovations.
                         </motion.p>
 
                         <motion.p

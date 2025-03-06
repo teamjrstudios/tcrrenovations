@@ -5,12 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import {
-    Building,
-    HomeIcon,
-    Hammer,
     PencilRuler,
     Droplet,
-    Wrench,
     ChevronRight, UtensilsCrossed, Home, TreesIcon
 } from 'lucide-react';
 

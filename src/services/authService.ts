@@ -2,8 +2,11 @@
 
 const API_URL = 'http://localhost:5005';
 const LOGIN_ENDPOINT = `${API_URL}/api/auth/login`;
-
-export const login = async (username, password) => {
+interface LoginResponse {
+    username: string;
+    password: string;
+}
+export const login = async ({username, password}: LoginResponse) => {
     try {
         const res = await fetch(LOGIN_ENDPOINT, {
             method: 'POST',

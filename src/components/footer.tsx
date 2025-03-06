@@ -65,7 +65,7 @@ const Footer = () => {
 
                         <div className="max-w-3xl relative z-10">
                             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Space?</h3>
-                            <p className="text-emerald-100 text-lg mb-8">Let's discuss your renovation project and bring your vision to life with TCR Renovations' expert craftsmanship.</p>
+                            <p className="text-emerald-100 text-lg mb-8">Let&#39;s discuss your renovation project and bring your vision to life with TCR Renovations&#39; expert craftsmanship.</p>
 
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Input
@@ -101,7 +101,7 @@ const Footer = () => {
                             />
                         </div>
                         <p className="text-emerald-200 mb-6">
-                            Southampton's premier renovation contractor delivering exceptional craftsmanship and transforming homes throughout Bucks County for over 15 years.
+                            Southampton&#39;s premier renovation contractor delivering exceptional craftsmanship and transforming homes throughout Bucks County for over 15 years.
                         </p>
                         <div className="flex gap-4">
                             <Link href="#" className="h-9 w-9 bg-emerald-800 hover:bg-emerald-700 rounded-full flex items-center justify-center transition-colors duration-300">

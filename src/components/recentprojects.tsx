@@ -1,5 +1,4 @@
 // components/RecentProjects.jsx
-import { format } from "date-fns";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -10,8 +9,21 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+interface Project {
+    id: string;
+    title: string;
+    description: string;
+    images?: string[];
+    tags?: string[];
+}
 
-const RecentProjects = ({ loading, projects, onEditClick }) => {
+interface RecentProjectsProps {
+    loading: boolean;
+    projects: Project[];
+    onEditClick: (project: Project) => void;
+}
+
+const RecentProjects = ({ loading, projects, onEditClick }:RecentProjectsProps) => {
     return (
         <div className="py-4 px-4 mb-8">
             <Card>

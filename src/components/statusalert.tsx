@@ -5,7 +5,16 @@ import {
 } from "@/components/ui/alert";
 import { Check, AlertCircle } from "lucide-react";
 
-const StatusAlert = ({ apiStatus }) => {
+interface ApiStatus {
+    success: boolean | null;
+    message: string;
+}
+
+interface StatusAlertProps {
+    apiStatus: ApiStatus;
+}
+
+const StatusAlert = ({ apiStatus }: StatusAlertProps) => {
     if (apiStatus.success === null) return null;
 
     return apiStatus.success ? (

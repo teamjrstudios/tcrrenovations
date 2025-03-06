@@ -15,6 +15,19 @@ import {
     AlertDialogHeader,
     AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+interface DeleteProjectDialogProps {
+    isOpen: boolean;
+    setIsOpen: (open: boolean) => void;
+    apiStatus: {
+        success?: boolean;
+        loading: boolean;
+        message?: string;
+    };
+    selectedProject?: {
+        title: string;
+    };
+    onDelete: () => void;
+}
 
 const DeleteProjectDialog = ({
                                  isOpen,
@@ -22,7 +35,7 @@ const DeleteProjectDialog = ({
                                  apiStatus,
                                  selectedProject,
                                  onDelete
-                             }) => {
+                             }:DeleteProjectDialogProps) => {
     return (
         <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
             <AlertDialogContent>

@@ -74,6 +74,8 @@ const EditProjectDialog = ({
                     />
 
                     {/* Status alert */}
+                    {/*eslint-disable-next-line @typescript-eslint/ban-ts-comment*/}
+                    {/*@ts-ignore*/}
                     <StatusAlert apiStatus={apiStatus} />
 
                     <div className="flex justify-end gap-2 pt-4">

@@ -27,7 +27,7 @@ const Page = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState("");
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault();
         setError("");
         setIsLoading(true);
@@ -36,6 +36,8 @@ const Page = () => {
             await login(username, password);
             router.push("/projects"); // Redirect to projects page after successful login
         } catch (err) {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
             setError(err.message || "Failed to login. Please check your credentials.");
         } finally {
             setIsLoading(false);

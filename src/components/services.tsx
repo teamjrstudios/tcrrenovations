@@ -9,10 +9,11 @@ import {
     HomeIcon,
     Hammer,
     PencilRuler,
-    Truck,
+    Droplet,
     Wrench,
-    ChevronRight
+    ChevronRight, UtensilsCrossed, Home, TreesIcon
 } from 'lucide-react';
+
 interface ServiceCardProps {
     icon: JSX.Element;
     title: string;
@@ -32,10 +33,9 @@ const ServiceCard = ({ icon, title, description, delay = 0 }: ServiceCardProps) 
             transition={{ duration: 0.5, delay }}
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
         >
-            <Card className="border border-emerald-100 hover:border-lime-300 transition-all duration-300 h-full overflow-hidden group">
-                <div className="absolute h-1 w-0 bg-gradient-to-r from-lime-500 to-emerald-600 top-0 left-0 group-hover:w-full transition-all duration-500"></div>
+            <Card className="border border-emerald-100 hover:border-emerald-300 transition-all duration-300 h-full overflow-hidden group">
                 <CardHeader className="pb-3">
-                    <div className="bg-lime-100 text-emerald-700 p-3 rounded-lg w-fit mb-4">
+                    <div className="bg-emerald-100 text-emerald-700 p-3 rounded-lg w-fit mb-4">
                         {icon}
                     </div>
                     <CardTitle className="text-emerald-950 text-xl">{title}</CardTitle>
@@ -46,7 +46,7 @@ const ServiceCard = ({ icon, title, description, delay = 0 }: ServiceCardProps) 
                 <CardFooter>
                     <Button
                         variant="ghost"
-                        className="text-emerald-700 hover:text-emerald-900 hover:bg-lime-100 p-0 h-auto font-medium"
+                        className="text-emerald-700 hover:text-emerald-900 hover:bg-emerald-100 p-0 h-auto font-medium"
                     >
                         Learn More <ChevronRight className="ml-1 h-4 w-4" />
                     </Button>
@@ -62,42 +62,43 @@ const ServicesSection = () => {
 
     const services = [
         {
-            icon: <Building className="h-6 w-6" />,
-            title: "Commercial Construction",
-            description: "Full-service commercial building solutions from concept to completion, including office buildings, retail spaces, and industrial facilities.",
+            icon: <UtensilsCrossed className="h-6 w-6" />,
+            title: "Kitchen Remodeling",
+            description: "Transform your kitchen with custom cabinets, modern appliances, and beautiful countertops.",
             delay: 0.1
         },
         {
-            icon: <HomeIcon className="h-6 w-6" />,
-            title: "Residential Building",
-            description: "Custom home construction and major renovations with attention to detail and quality craftsmanship for your dream living space.",
+            icon: <Droplet className="h-6 w-6" />,
+            title: "Bathroom Renovation",
+            description: "Complete bathroom makeovers including tiling, fixtures, and luxury upgrades.",
             delay: 0.2
         },
         {
-            icon: <Hammer className="h-6 w-6" />,
-            title: "Renovation & Remodeling",
-            description: "Transform your existing space with comprehensive renovation services, breathing new life into outdated structures.",
+            icon: <Home className="h-6 w-6" />,
+            title: "Home Additions",
+            description: "Expand your living space with custom room additions and home extensions.",
             delay: 0.3
         },
         {
             icon: <PencilRuler className="h-6 w-6" />,
-            title: "Design & Planning",
-            description: "Expert architectural design and planning services to bring your vision to life with practical, sustainable solutions.",
+            title: "Interior Renovation",
+            description: "Full interior updates including flooring, painting, and custom built-ins.",
             delay: 0.4
         },
         {
-            icon: <Truck className="h-6 w-6" />,
-            title: "Infrastructure Development",
-            description: "Roads, bridges, and civil engineering projects built to the highest standards of durability and sustainability.",
+            icon: <Home className="h-6 w-6" />,
+            title: "Basement Finishing",
+            description: "Convert your basement into a functional living space with expert finishing.",
             delay: 0.5
         },
         {
-            icon: <Wrench className="h-6 w-6" />,
-            title: "Maintenance & Repair",
-            description: "Ongoing maintenance and timely repairs to protect your investment and ensure the longevity of your property.",
+            icon: <TreesIcon className="h-6 w-6" />,
+            title: "Outdoor Living",
+            description: "Create beautiful outdoor spaces with decks, patios, and landscaping.",
             delay: 0.6
-        }
+        },
     ];
+
 
     // Staggered animation variants
     const containerVariants = {
@@ -129,9 +130,9 @@ const ServicesSection = () => {
             className="relative py-20 bg-gradient-to-b from-white via-emerald-50 to-white overflow-hidden"
         >
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-full h-64 bg-[radial-gradient(circle_at_70%_-20%,_var(--tw-gradient-stops))] from-lime-200/40 via-transparent to-transparent opacity-70 pointer-events-none transform rotate-180" />
+            <div className="absolute top-0 right-0 w-full h-64 bg-[radial-gradient(circle_at_70%_-20%,_var(--tw-gradient-stops))] from-emerald-200/40 via-transparent to-transparent opacity-70 pointer-events-none transform rotate-180" />
 
-            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-lime-200 rounded-full opacity-20 blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-emerald-200 rounded-full opacity-20 blur-3xl pointer-events-none" />
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-emerald-200 rounded-full opacity-20 blur-3xl pointer-events-none" />
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -143,9 +144,9 @@ const ServicesSection = () => {
                     animate={isInView ? "visible" : "hidden"}
                 >
                     <motion.div variants={itemVariants}>
-                        <Badge className="bg-lime-100 text-emerald-700 hover:bg-lime-100 mb-2">Our Services</Badge>
-                        <h2 className="text-3xl md:text-4xl font-bold text-emerald-950 mb-4">Comprehensive Construction Solutions</h2>
-                        <p className="text-emerald-700 text-lg">From concept to completion, we offer a full range of services to meet your construction needs with excellence and precision.</p>
+                        <Badge className="bg-emerald-100 text-emerald-700 hover:bg-emerald-100 mb-2">Our Services</Badge>
+                        <h2 className="text-3xl md:text-4xl font-bold text-emerald-950 mb-4">Comprehensive Renovation Solutions</h2>
+                        <p className="text-emerald-700 text-lg">TCR Renovations offers expert craftsmanship and premium materials to transform your Southampton home with our full range of renovation services.</p>
                     </motion.div>
                 </motion.div>
 
@@ -169,12 +170,7 @@ const ServicesSection = () => {
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.5, delay: 0.7 }}
                 >
-                    <Button
-                        size="lg"
-                        className="bg-emerald-800 hover:bg-emerald-700 text-white px-8"
-                    >
-                        View All Services
-                    </Button>
+
                 </motion.div>
             </div>
 

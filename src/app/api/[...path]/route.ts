@@ -13,7 +13,7 @@ export async function GET(
         console.log('Attempting to fetch image:', imagePath);
 
         // Try first URL (uploads directory)
-        let imageUrl = `http://147.135.31.124:8000/uploads/${imagePath}`;
+        let imageUrl = `http://147.135.31.124:8000/uploads/${imagePath}`; //pub
         let imageData;
         let contentType;
 

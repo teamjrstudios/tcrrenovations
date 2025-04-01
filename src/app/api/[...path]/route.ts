@@ -13,7 +13,7 @@ export async function GET(
         console.log('Attempting to fetch image:', imagePath);
 
         // Try first URL (uploads directory)
-        let imageUrl = `http://localhost:8080/uploads/${imagePath}`;
+        let imageUrl = `http://147.135.31.124:8000/uploads/${imagePath}`;
         let imageData;
         let contentType;
 
@@ -24,7 +24,7 @@ export async function GET(
 
             if (!response.ok) {
                 console.log('First URL failed, trying second URL');
-                imageUrl = `http://localhost:8000/images/${imagePath}`;
+                imageUrl = `http://147.135.31.124:8000/images/${imagePath}`;
                 response = await fetch(imageUrl);
 
                 if (!response.ok) {

@@ -15,7 +15,7 @@ type Project = {
 export async function GET() {
     try {
         // Fetch the data from the remote API
-        const response = await fetch("http://localhost:8000/api/projects");
+        const response = await fetch("http://147.135.31.124:8000/api/projects");
 
         // Check if the response is ok
         if (!response.ok) {

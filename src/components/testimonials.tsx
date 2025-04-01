@@ -26,7 +26,7 @@ const testimonials = [
         role: "Property Manager",
         company: "Bucks County Properties",
         image: "/images/testimonial-2.jpg",
-        quote: "We've partnered with TCR on multiple renovation projects, and they consistently deliver exceptional quality on time and within budget. Their project management and craftsmanship are unmatched in Southampton.",
+        quote: "We've partnered with TCR on multiple renovation projects, and they consistently deliver exceptional quality on time and within budget. Their projects management and craftsmanship are unmatched in Southampton.",
         rating: 5,
         project: "Multi-Unit Renovations",
         icon: <Building className="h-4 w-4" />
@@ -37,7 +37,7 @@ const testimonials = [
         role: "Homeowner",
         company: "",
         image: "/images/testimonial-3.jpg",
-        quote: "The renovation of our master bathroom was handled with incredible care. They understood our vision and transformed our outdated bathroom into a spa-like retreat. We're already planning our next project with TCR!",
+        quote: "The renovation of our master bathroom was handled with incredible care. They understood our vision and transformed our outdated bathroom into a spa-like retreat. We're already planning our next projects with TCR!",
         rating: 5,
         project: "Bathroom Renovation",
         icon: <HomeIcon className="h-4 w-4" />
@@ -59,7 +59,7 @@ const testimonials = [
         role: "Homeowner",
         company: "",
         image: "/images/testimonial-5.jpg",
-        quote: "TCR Renovations transformed our outdated kitchen into a modern cooking paradise. Their team was professional, clean, and completed the project ahead of schedule. We couldn't be happier with the results.",
+        quote: "TCR Renovations transformed our outdated kitchen into a modern cooking paradise. Their team was professional, clean, and completed the projects ahead of schedule. We couldn't be happier with the results.",
         rating: 5,
         project: "Kitchen Renovation",
         icon: <HomeIcon className="h-4 w-4" />

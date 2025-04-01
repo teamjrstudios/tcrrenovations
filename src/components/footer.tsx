@@ -16,6 +16,7 @@ import {
     ArrowRight,
     ChevronRight
 } from 'lucide-react';
+import {useContactInfo} from "@/components/contactcontext";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -42,7 +43,7 @@ const Footer = () => {
             }
         }
     };
-
+    const contactInfo = useContactInfo();
     return (
         <footer className="relative bg-gray-900 text-white overflow-hidden pt-24 pb-8">
             {/* Decorative elements */}
@@ -178,21 +179,21 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-start">
                                 <MapPin className="h-5 w-5 text-emerald-500 mt-0.5 mr-3 flex-shrink-0" />
-                                <span className="text-emerald-200">1470 Buck Hill Dr, Southampton PA, United States</span>
+                                <span className="text-emerald-200">{contactInfo.address}</span>
                             </li>
                             <li className="flex items-center">
                                 <Phone className="h-5 w-5 text-emerald-500 mr-3 flex-shrink-0" />
-                                <span className="text-emerald-200">+1 (267) 650-0283</span>
+                                <span className="text-emerald-200">{contactInfo.phone}</span>
                             </li>
                             <li className="flex items-center">
                                 <Mail className="h-5 w-5 text-emerald-500 mr-3 flex-shrink-0" />
-                                <span className="text-emerald-200">info@tcrrenovations.com</span>
+                                <span className="text-emerald-200">{contactInfo.email}</span>
                             </li>
                         </ul>
                         <div className="mt-6 bg-emerald-900/50 p-4 rounded-lg border border-emerald-800/50">
                             <p className="text-emerald-100 text-sm">
                                 <span className="block font-medium text-white mb-1">Business Hours:</span>
-                                Monday - Friday: 8:00 AM - 6:00 PM<br />
+                                {contactInfo.hours}<br />
                             </p>
                         </div>
                     </motion.div>

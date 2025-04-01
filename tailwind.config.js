@@ -6,7 +6,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}" // ✅ Include components folder
   ],
   theme: {
-    extend: {},
+    extend: {}
   },
   plugins: [],
 };

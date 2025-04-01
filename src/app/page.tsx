@@ -3,7 +3,6 @@ import HeroSection from "@/components/hero";
 import ServicesSection from "@/components/services";
 import PortfolioSection from "@/components/portfolio";
 import TestimonialsSection from "@/components/testimonials";
-import Footer from "@/components/footer";
 
 const Home = () => {
     return (
@@ -13,7 +12,7 @@ const Home = () => {
             <ServicesSection/>
             <PortfolioSection/>
             <TestimonialsSection/>
-            <Footer/>
+
         </div>
     );
 };
